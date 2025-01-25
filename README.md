@@ -24,6 +24,7 @@ Make sure you have the following versions installed:
 ```bash
 git clone [Repository URL]
 
+```
  ---
  
 #### 2. Set up the server:
@@ -31,17 +32,25 @@ Navigate to the server folder:
 ```bash
 cd server
 
+```
+
 Install the dependencies:
 ```bash
 npm install
+
+```
 
 Run database migrations:
 ```bash
 node migrations/createDatabase.js
 
+```
+
 Start the server:
 ```bash
 npm start
+
+```
 
 ---
 
@@ -50,10 +59,20 @@ Open a new terminal and navigate to the client folder:
 ```bash
 cd client
 
+```
+
 Install the dependencies:
 ```bash
 npm install
 
+```
+
 Start the client:
 ```bash
 npm start
+
+```
+
+---
+
+

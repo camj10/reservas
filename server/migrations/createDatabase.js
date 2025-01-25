@@ -39,11 +39,11 @@ const sqlScript = `
 
   INSERT INTO persona (id, nombrecompleto, nrodocumento, correo, telefono)
   VALUES
-  (14, 'asdf', '5678911', 'asdf@email.com', '45678092'),
-  (16, 'ytrew', '65432', 'ytrew@email.com', '9876'),
-  (18, 'Xdfxf', '367543', 'fdw@fds.com', '987654'),
-  (19, 'kjhgfd', '9876543', 'kjhgfd@email.com', '0987654'),
-  (20, 'AABC', '458790', 'aabc@email.com', '809789675864')
+  (14, 'Juan Perez', '5678911', 'asdf@email.com', '45678092'),
+  (16, 'Juancito Perez', '65432', 'ytrew@email.com', '9876'),
+  (18, 'Juana Perez', '367543', 'fdw@fds.com', '987654'),
+  (19, 'Juanita Perez', '9876543', 'kjhgfd@email.com', '0987654'),
+  (20, 'Juan Juanito Perez', '458790', 'aabc@email.com', '809789675864')
   ON DUPLICATE KEY UPDATE id=id;
 
   CREATE TABLE IF NOT EXISTS reserva (

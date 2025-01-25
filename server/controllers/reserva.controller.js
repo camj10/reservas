@@ -34,14 +34,14 @@ const createReserva = async (req, res) => {
     }
   
     const fechaReserva = new Date(); 
-    const formattedFechaReserva = fechaReserva.toISOString().slice(0, 19).replace('T', ' '); // Convertir a formato `YYYY-MM-DD HH:mm:ss`
+    const formattedFechaReserva = fechaReserva.toISOString().slice(0, 19).replace('T', ' '); // Formato `YYYY-MM-DD HH:mm:ss`
     const dias = (new Date(fechasalida) - new Date(fechaentrada)) / (1000 * 60 * 60 * 24);
   
     if (dias <= 0) {
       return res.status(400).json({ error: 'La fecha de salida debe ser posterior a la fecha de entrada' });
     }
   
-    const montoreserva = dias * 120000; // Cálculo del monto de la reserva
+    const montoreserva = dias * 120000;
   
     try {
       const db = await connection();
@@ -117,6 +117,7 @@ export const checkHabitacionDisponible = async (req, res) => {
   }
 
   const formatFecha = (fecha) => {
+    console.log("En formatfecha fecha contiene: ",fecha);
     const fechaLimpia = fecha.replace(/^(.*\d{4})[^\d]+$/, '$1');
     const d = new Date(fechaLimpia);
     if (isNaN(d.getTime())) {

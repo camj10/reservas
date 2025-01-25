@@ -42,7 +42,6 @@ const PersonaForm = ({ onSubmit, initialData = {} }) => {
       }}
     >
       <Typography variant="h6" sx={{ mb: 2 }}>
-        {/* Aquí verificamos si safeInitialData tiene alguna propiedad, para decidir si es agregar o actualizar */}
         {Object.keys(safeInitialData).length ? 'Actualizar Persona' : 'Agregar Persona'}
       </Typography>
 

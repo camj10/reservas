@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3000'; 
+const API_BASE = process.env.REACT_APP_API_BASE || 'http://localhost:3000';
 export const fetchPersonas = async () => {
   const response = await fetch(`${API_BASE}/api/personas`);
   return response.json();
@@ -6,9 +6,9 @@ export const fetchPersonas = async () => {
 
 export const createPersona = async (persona) => {
   try {
-    const response = await fetch('http://localhost:3000/api/personas', {
+    const response = await fetch(`${API_BASE}/api/personas`, {
       method: 'POST',
-      headers: {
+      headers: { 
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(persona),

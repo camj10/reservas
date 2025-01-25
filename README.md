@@ -40,6 +40,12 @@ npm install
 
 ```
 
+Copy the .env.example file to .env
+```bash
+cp .env.example .env
+
+```
+
 Run database migrations:
 ```bash
 node migrations/createDatabase.js
@@ -64,6 +70,12 @@ cd client
 Install the dependencies:
 ```bash
 npm install
+
+```
+
+Copy the .env.example file to .env
+```bash
+cp .env.example .env
 
 ```
 
